@@ -1,20 +1,23 @@
-from src.power import power_function
-from src.constants import SAMPLE_CONSTANT
+from expression_parser import Parser
+from calculator_error import CalculatorError
 
 
 def main() -> None:
     """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
+    Основная функция работы калькулятора
     """
+    parser = Parser()
 
-    target, degree = map(int, input("Введите два числа разделенные пробелом: ").split(" "))
+    while True:
+        try:
+            expression = input("\nВведите выражение: ").strip()
 
-    result = power_function(target=target, power=degree)
+            result = parser.parse(expression)
+            print(f"Результат: {result}")
 
-    print(result)
+        except CalculatorError as error:
+            print(f"Ошибка: {error}")
 
-    print(SAMPLE_CONSTANT)
 
 if __name__ == "__main__":
     main()
