@@ -1,5 +1,5 @@
-from .expression_parser import calculate_expression
-from .calculator_error import CalculatorError
+from src.expression_parser import calculate_expression
+from src.calculator_error import CalculatorError
 
 
 def main() -> None:

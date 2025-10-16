@@ -1,4 +1,4 @@
-from .calculator_error import CalculatorError
+from src.calculator_error import CalculatorError
 
 
 class RPNStack:

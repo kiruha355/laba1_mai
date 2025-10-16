@@ -1,6 +1,6 @@
-from .tokenizer import tokenize
-from .calculator_error import CalculatorError
-from .stack import RPNStack
+from src.tokenizer import tokenize
+from src.calculator_error import CalculatorError
+from src.stack import RPNStack
 
 
 class Parser:
