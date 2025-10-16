@@ -1,18 +1,17 @@
-from expression_parser import Parser
-from calculator_error import CalculatorError
+from .expression_parser import calculate_expression
+from .calculator_error import CalculatorError
 
 
 def main() -> None:
     """
     Основная функция работы калькулятора
     """
-    parser = Parser()
 
     while True:
         try:
             expression = input("\nВведите выражение: ").strip()
 
-            result = parser.parse(expression)
+            result = calculate_expression(expression)
             print(f"Результат: {result}")
 
         except CalculatorError as error:

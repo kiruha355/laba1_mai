@@ -1,5 +1,5 @@
 import re
-from calculator_error import CalculatorError
+from .calculator_error import CalculatorError
 
 TOKEN_RE = re.compile(r"""
 \s*?
@@ -18,7 +18,7 @@ def tokenize(data: str):
     возвращаем токены
     """
     if not data or not data.strip():
-        raise CalculatorError("Пустой ввод")
+        raise CalculatorError("Ошибка ввода")
 
     position = 0
     out: list[tuple] = []
@@ -26,7 +26,7 @@ def tokenize(data: str):
     while position < len(data):
         match = TOKEN_RE.match(data, position)
         if not match:
-            raise CalculatorError(f"Некорректный ввод около: '{data[position:]}'")
+            raise CalculatorError("Ошибка ввода")
 
         token = match.group(1)
         position = match.end()
@@ -41,7 +41,7 @@ def tokenize(data: str):
             try:
                 out.append(("NUM", float(token)))
             except ValueError:
-                raise CalculatorError(f"Некорректное число: '{token}'")
+                raise CalculatorError("Ошибка ввода")
         else:
             out.append((token, None))
 

@@ -1,6 +1,6 @@
-from tokenizer import tokenize
-from calculator_error import CalculatorError
-from stack import RPNStack
+from .tokenizer import tokenize
+from .calculator_error import CalculatorError
+from .stack import RPNStack
 
 
 class Parser:
@@ -59,3 +59,8 @@ class Parser:
                 self.stack.apply_operator(token_type)
 
         return self.stack.get_result()
+
+
+def calculate_expression(expression: str) -> float:
+    parser = Parser()
+    return parser.parse(expression)

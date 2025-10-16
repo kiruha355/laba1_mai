@@ -1,4 +1,4 @@
-from calculator_error import CalculatorError
+from .calculator_error import CalculatorError
 
 
 class RPNStack:
@@ -41,7 +41,7 @@ class RPNStack:
         Извлечь значение из стека
         """
         if not self.stack:
-            raise CalculatorError("Ошибка ввода стека")
+            raise CalculatorError("Ошибка ввода")
         return self.stack.pop()
 
     def check_operand(self, a: float, b: float, operator: str) -> None:
@@ -94,7 +94,7 @@ class RPNStack:
             case '**':
                 return a ** b
             case _:
-                raise CalculatorError("Неизвестный оператор")
+                raise CalculatorError("Ошибка ввода")
 
     def get_result(self) -> float:
         """
