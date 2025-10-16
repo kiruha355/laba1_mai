@@ -12,7 +12,7 @@ class TestExpressions(unittest.TestCase):
         self.assertEqual(calculate_expression("$5 3 +"), 8.0)
         self.assertEqual(calculate_expression("0 5 +"), 5.0)
         self.assertEqual(calculate_expression("~2 ~2 -"), 0.0)
-        self.assertEqual(calculate_expression("10 4 -"), 6.0)
+        self.assertEqual(calculate_expression("10 3 -"), 7.0)
         self.assertEqual(calculate_expression("3 7 *"), 21.0)
         self.assertEqual(calculate_expression("1 1 *"), 1.0)
         self.assertEqual(calculate_expression("15 3 /"), 5.0)
