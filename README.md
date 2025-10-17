@@ -32,26 +32,28 @@
 3.Возможность использования любого числа скобок. Например: (((((2 2 +)))))
 
 ### Структура проекта:
+ <pre>
 
-├── .gitignore # git ignore файл
-├── .pre-commit-config.yaml # Средства автоматизации проверки кодстайла
-├── README.md # Документация
-├── pyproject.toml # Зависимости проекта
-├── requirements.txt # Зависимости проекта
-├── uv.lock # Зависимости проекта
-├── src # Исходный код
-│ ├── __init__.py
-│ ├── calculator_error.py # Ошибки ввода
-│ ├── expression_parser.py # Парсер математических выражений
-│ ├── main.py # Главный файл
-│ ├── stack.py # Стек для вычислений
-│ └── tokenizer.py # Токенизатор входных выражений
-└── tests # Тесты
-├── __init__.py
-├── test_calc.py # Тесты выражений
-├── test_errors.py # Тесты обработки ошибок
-├── test_stack.py # Тесты стека
-└── test_tokenizer.py # Тесты токенизатора
+├── .gitignore                 # git ignore файл
+├── .pre-commit-config.yaml    # Средства автоматизации проверки кодстайла
+├── README.md                  # Документация
+├── pyproject.toml             # Зависимости проекта
+├── requirements.txt           # Зависимости проекта
+├── uv.lock                    # Зависимости проекта
+├── src                        # Исходный код
+│   ├── __init__.py
+│   ├── calculator_error.py    # Ошибки ввода
+│   ├── expression_parser.py   # Парсер математических выражений
+│   ├── main.py                # Главный файл
+│   ├── stack.py               # Стек для вычислений
+│   └── tokenizer.py           # Токенизатор входных выражений
+└── tests                      # Тесты
+    ├── __init__.py
+    ├── test_calc.py           # Тесты выражений
+    ├── test_errors.py         # Тесты обработки ошибок
+    ├── test_stack.py          # Тесты стека
+    └── test_tokenizer.py      # Тесты токенизатора
+</pre>
 
 ### Принцип работы кода:
 
