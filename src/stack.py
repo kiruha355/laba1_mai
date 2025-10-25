@@ -24,7 +24,7 @@ class RPNStack:
             '**': (3, lambda a, b: a ** b),
         }
 
-    def _error(self, message: str) -> None:  # ← Добавил этот метод
+    def _error(self, message: str) -> None:
         """
         Выброс ошибок
         """
@@ -101,9 +101,3 @@ class RPNStack:
         Получить результат из стека
         """
         return self.stack[0]
-
-    def clear(self) -> None:
-        """
-        Очистить стек
-        """
-        self.stack = []
